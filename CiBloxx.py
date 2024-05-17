@@ -1,3 +1,22 @@
+# This code is a personal attempt to solve the
+# old game called City Bloxx. 
+
+# This code generates possible solutions given the following rules:
+# 1) A city has a A * B dimension (like a 2d array)
+# 2) Each array possition represents a city spot where a tower can be placed.
+# 3) Exist  four tower types, each one represented by a value (2, 4, 6, 8)
+#    The original game represents tower by colors as follows: Blue (2), Red (4), Green (6) and Yellow (8)
+# 4) Except for the Blue tower (2), each tower requires other towers as neighbors for being builded:
+
+#    Blue tower (2) does not require neighbors
+#    Red tower (4) requires a least a Blue tower as neighbor
+#    Green tower (6) requires a least a Blue tower and a Red tower as neighbors
+#    Yellow tower (8) requires a least a Blue tower, a Red tower and a Green tower as neighbors
+
+#    Required neighbors must be placed directly up, right, down or left from the tower you want to build
+#    No diagonal towwer are admited as valid neighbors
+
+# The main goal of the game is to place towers 
 
 import pandas as pd
 from random import randint
