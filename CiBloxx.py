@@ -45,8 +45,8 @@ def init_city(rows, cols):
     #city_iterator_random(600000, 3)
     #city_iterator_lineal_with_dependency_supplier()
     city_iterator_random_with_dependency_supplier(1000)
-    print(print_city())
-    print(print_city_towers_resume())
+    print_city()
+    print_city_towers_resume()
    
 def print_city():
     y_labels = [' '] * city_cols
@@ -63,7 +63,7 @@ def print_city_towers_resume():
             else:
                 resume[tower] = 1
 
-    print(resume)
+    print(dict(sorted(resume.items())))
 
 def set_empty_spots(cols, rows):
     global city
@@ -256,4 +256,4 @@ def create_tower(tower_type, tower_x_coordinate, tower_y_coordinate):
      global city
      city[tower_x_coordinate][tower_y_coordinate] = tower_type
 
-init_city(3, 3)
+init_city(5, 5)
